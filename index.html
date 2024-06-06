@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrimony Site</title>
+    <!-- tailwaindcss cdn link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom css link -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="">
+    <!-- Header section -->
+<header class="bg-white w-full flex py-5 px-4 justify-between shadow-md md:py-7 md:px-20">
+    <a href="" class="text-2xl md:text-3xl text-red-500 font-medium">matrimony.com</a>
+    <nav id="nav-links" class="lg:block hidden">
+      <ul class="flex items-center">
+        <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Home</a></li>
+        <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Members</a></li>
+        <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Profile</a></li>
+        <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Contact Us</a></li>
+        <li class="px-1 py-1 md:px-3 md:py-2">
+          <a href="" class="px-2 py-1 md:px-3 md:py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500">Login or Register</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section id="hero">
+    <div id="form" class="bg-white py-10 lg:mx-4 rounded-2xl">
+      <p class="uppercase text-xl font-bold pt-5 pb-5 md:text-2xl">Register now</p>
+        <form action="">
+          <div id="info1" class="py-5 w-full">
+            <i class="fa-solid fa-user text-white bg-purple-600 p-2 rounded"></i>
+            <input
+              type="text"
+              name="profile"
+              id="profile"
+              placeholder="Profile Created By"
+              class="border-gray-100 border-2 rounded ps-2 py-1 bg-white"
+            />
+            <br class="block md:hidden">
+            <br class="block md:hidden">
+            <select name="age" id="age" class="border-gray-100 border-2 rounded ps-2 py-1 px-16 bg-white">
+              <i class="fa-solid fa-venus-mars text-white bg-purple-600 p-2 rounded"></i>
+              <option value="">Select Gender</option>
+              <option value="Make">Male</option>
+              <option value="Female">Female</option>
+              <option value="Others">Others</option>
+            </select>
+          </div>
+          <div id="info2" class="pb-5">
+            <i class="fa-solid fa-user text-white bg-purple-600 p-2 rounded"></i>
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              placeholder="Enter First name"
+              class="border-gray-100 border-2 rounded ps-2 py-1 bg-white"
+            />
+            <br class="block md:hidden">
+            <br class="block md:hidden">
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              placeholder="Enter last name"
+              class="border-gray-100 border-2 rounded ps-2 py-1 bg-white"
+            />
+          </div>
+          <div id="info3" class="pb-5">
+            <i class="fa-solid fa-calendar text-white bg-purple-600 p-2 rounded"></i>
+            <select id="day" name="day" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+                <option value="">Date</option>
+                <!-- Dynamically populate options for days -->
+            </select>
+            <br class="block md:hidden">
+            <br class="block md:hidden">
+            <select id="month" name="month" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+                <option value="">Month</option>
+                <!-- Dynamically populate options for months -->
+            </select>
+            <br class="block md:hidden">
+            <br class="block md:hidden">
+            <select id="year" name="year" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+                <option value="">Year</option>
+                <!-- Dynamically populate options for years -->
+            </select>
+          </div>
+          <div id="info4" class="pb-5">
+            <i class="fa-solid fa-hands-praying text-white bg-purple-600 py-2 px-1.5 rounded"></i>
+            <select name="religion" id="religion" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+                <option value="">Select your Religion</option>
+                <option value="Hinduism">Hinduism</option>
+                <option value="Christianity">Christianity</option>
+                <option value="Islam">Islam</option>
+                <option value="Jainism">Jainism</option>
+                <option value="Sikhism">Sikhism</option>
+                <option value="Buddhism">Buddhism</option>
+                <option value="Others">Others</option>
+            </select>
+          </div>
+          <div id="info5" class="pb-5">
+            <i class="fa-solid fa-people-group text-white bg-purple-600 py-2 px-1.5 rounded"></i>
+            <select name="caste" id="caste" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+                <option value="">Select your Caste</option>
+                <option value="Brahmins">Brahmins</option>
+                <option value="Kshatriyas">Kshatriyas</option>
+                <option value="Vaishyas">Vaishyas</option>
+                <option value="Shudras">Shudras</option>
+                <option value="Scheduled Castes (SC)">Scheduled Castes (SC)</option>
+                <option value="Scheduled Tribes (ST)">Scheduled Tribes (ST)</option>
+                <option value="Other Backward Classes (OBC)">Other Backward Classes (OBC)</option>
+            </select>
+          </div>
+          <div id="info6" class="flex pb-5 flex-col lg:flex-row">
+           <div class="item1 flex">
+            <div class="text-white bg-purple-600 py-1.5 px-1.5 rounded w-8">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                <path d="M7.75 2.75a.75.75 0 0 0-1.5 0v1.258a32.987 32.987 0 0 0-3.599.278.75.75 0 1 0 .198 1.487A31.545 31.545 0 0 1 8.7 5.545 19.381 19.381 0 0 1 7 9.56a19.418 19.418 0 0 1-1.002-2.05.75.75 0 0 0-1.384.577 20.935 20.935 0 0 0 1.492 2.91 19.613 19.613 0 0 1-3.828 4.154.75.75 0 1 0 .945 1.164A21.116 21.116 0 0 0 7 12.331c.095.132.192.262.29.391a.75.75 0 0 0 1.194-.91c-.204-.266-.4-.538-.59-.815a20.888 20.888 0 0 0 2.333-5.332c.31.031.618.068.924.108a.75.75 0 0 0 .198-1.487 32.832 32.832 0 0 0-3.599-.278V2.75Z" />
+                <path fill-rule="evenodd" d="M13 8a.75.75 0 0 1 .671.415l4.25 8.5a.75.75 0 1 1-1.342.67L15.787 16h-5.573l-.793 1.585a.75.75 0 1 1-1.342-.67l4.25-8.5A.75.75 0 0 1 13 8Zm2.037 6.5L13 10.427 10.964 14.5h4.073Z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <select name="motherTongue" id="motherTongue" class="ms-1 border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+                <option value="">Mother Tongue</option>
+                <option value="Assamese">Assamese</option>
+                <option value="Bengali">Bengali</option>
+                <option value="Bodo">Bodo</option>
+                <option value="Dogri">Dogri</option>
+                <option value="Gujarati">Gujarati</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Kannada">Kannada</option>
+                <option value="Kashmiri">Kashmiri</option>
+                <option value="Konkani">Konkani</option>
+                <option value="Maithili">Maithili</option>
+                <option value="Malayalam">Malayalam</option>
+                <option value="Manipuri">Manipuri</option>
+                <option value="Marathi">Marathi</option>
+                <option value="Nepali">Nepali</option>
+                <option value="Odia">Odia</option>
+                <option value="Punjabi">Punjabi</option>
+                <option value="Sanskrit">Sanskrit</option>
+                <option value="Santhali">Santhali</option>
+                <option value="Sindhi">Sindhi</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Urdu">Urdu</option>
+            </select>
+           </div>
+           <br class="block md:hidden">
+            <select name="country" id="country" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+                <option value="">country</option>
+                <option value="Afghanistan">Afghanistan</option>
+                <option value="Åland Islands">Åland Islands</option>
+                <option value="Albania">Albania</option>
+                <option value="Algeria">Algeria</option>
+                <option value="American Samoa">American Samoa</option>
+                <option value="Andorra">Andorra</option>
+                <option value="Angola">Angola</option>
+                <option value="Anguilla">Anguilla</option>
+                <option value="Antarctica">Antarctica</option>
+                <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Armenia">Armenia</option>
+                <option value="Aruba">Aruba</option>
+                <option value="Australia">Australia</option>
+                <option value="Austria">Austria</option>
+                <option value="Azerbaijan">Azerbaijan</option>
+                <option value="Bahamas">Bahamas</option>
+                <option value="Bahrain">Bahrain</option>
+                <option value="Bangladesh">Bangladesh</option>
+                <option value="Barbados">Barbados</option>
+                <option value="Belarus">Belarus</option>
+                <option value="Belgium">Belgium</option>
+                <option value="Belize">Belize</option>
+                <option value="Benin">Benin</option>
+                <option value="Bermuda">Bermuda</option>
+                <option value="Bhutan">Bhutan</option>
+                <option value="Bolivia">Bolivia</option>
+                <option value="Bonaire, Sint Eustatius and Saba">Bonaire</option>
+                <option value="Bosnia and Herzegovina">Bosnia</option>
+                <option value="Botswana">Botswana</option>
+                <option value="Bouvet Island">Bouvet Island</option>
+                <option value="Brazil">Brazil</option>
+                <option value="British Indian Ocean Territory">British</option>
+                <option value="Brunei Darussalam">Brunei Darussalam</option>
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="Burkina Faso">Burkina Faso</option>
+                <option value="Burundi">Burundi</option>
+                <option value="Cambodia">Cambodia</option>
+                <option value="Cameroon">Cameroon</option>
+                <option value="Canada">Canada</option>
+                <option value="Cape Verde">Cape Verde</option>
+                <option value="Cayman Islands">Cayman Islands</option>
+                <option value="Central African Republic">Central African</option>
+                <option value="Chad">Chad</option>
+                <option value="Chile">Chile</option>
+                <option value="China">China</option>
+                <option value="Christmas Island">Christmas Island</option>
+                <option value="Cocos (Keeling) Islands">Coco Islands</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Comoros">Comoros</option>
+                <option value="Congo">Congo</option>
+                <option value="Congo, The Democratic Republic of The">Congo</option>
+                <option value="Cook Islands">Cook Islands</option>
+                <option value="Costa Rica">Costa Rica</option>
+                <option value="Côte d'Ivoire">Côte d'Ivoire</option>
+                <option value="Croatia">Croatia</option>
+                <option value="Cuba">Cuba</option>
+                <option value="Curaçao">Curaçao</option>
+                <option value="Cyprus">Cyprus</option>
+                <option value="Czech Republic">Czech Republic</option>
+                <option value="Denmark">Denmark</option>
+                <option value="Djibouti">Djibouti</option>
+                <option value="Dominica">Dominica</option>
+                <option value="Dominican Republic">Dominican Republic</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Egypt">Egypt</option>
+                <option value="El Salvador">El Salvador</option>
+                <option value="Equatorial Guinea">Equatorial Guinea</option>
+                <option value="Eritrea">Eritrea</option>
+                <option value="Estonia">Estonia</option>
+                <option value="Ethiopia">Ethiopia</option>
+                <option value="Falkland Islands (Malvinas)">Falkland Islands</option>
+                <option value="Faroe Islands">Faroe Islands</option>
+                <option value="Fiji">Fiji</option>
+                <option value="Finland">Finland</option>
+                <option value="France">France</option>
+                <option value="French Guiana">French Guiana</option>
+                <option value="French Polynesia">French Polynesia</option>
+                <option value="French Southern Territories">French Southern</option>
+                <option value="Gabon">Gabon</option>
+                <option value="Gambia">Gambia</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Germany">Germany</option>
+                <option value="Ghana">Ghana</option>
+                <option value="Gibraltar">Gibraltar</option>
+                <option value="Greece">Greece</option>
+                <option value="Greenland">Greenland</option>
+                <option value="Grenada">Grenada</option>
+                <option value="Guadeloupe">Guadeloupe</option>
+                <option value="Guam">Guam</option>
+                <option value="Guatemala">Guatemala</option>
+                <option value="Guernsey">Guernsey</option>
+                <option value="Guinea">Guinea</option>
+                <option value="Guinea-Bissau">Guinea-Bissau</option>
+                <option value="Guyana">Guyana</option>
+                <option value="Haiti">Haiti</option>
+                <option value="Heard Island and Mcdonald Islands">Heard Islands</option>
+                <option value="Holy See (Vatican City State)">Holy See</option>
+                <option value="Honduras">Honduras</option>
+                <option value="Hong Kong">Hong Kong</option>
+                <option value="Hungary">Hungary</option>
+                <option value="Iceland">Iceland</option>
+                <option value="India">India</option>
+                <option value="Indonesia">Indonesia</option>
+                <option value="Iran, Islamic Republic of">Iran</option>
+                <option value="Iraq">Iraq</option
+                <option value="Ireland">Ireland</option>
+                <option value="Isle of Man">Isle of Man</option>
+                <option value="Israel">Israel</option>
+                <option value="Italy">Italy</option>
+                <option value="Jamaica">Jamaica</option>
+                <option value="Japan">Japan</option>
+                <option value="Jersey">Jersey</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Kazakhstan">Kazakhstan</option>
+                <option value="Kenya">Kenya</option>
+                <option value="Kiribati">Kiribati</option>
+                <option value="Korea, Democratic People's Republic of">Korea</option>
+                <option value="Kosovo">Kosovo</option>
+                <option value="Kuwait">Kuwait</option>
+                <option value="Kyrgyzstan">Kyrgyzstan</option>
+                <option value="Latvia">Latvia</option>
+                <option value="Lebanon">Lebanon</option>
+                <option value="Lesotho">Lesotho</option>
+                <option value="Liberia">Liberia</option>
+                <option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+                <option value="Liechtenstein">Liechtenstein</option>
+                <option value="Lithuania">Lithuania</option>
+                <option value="Luxembourg">Luxembourg</option>
+                <option value="Macao">Macao</option>
+                <option value="Macedonia, the Former Yugoslav Republic of">Macedonia</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="Malawi">Malawi</option>
+                <option value="Malaysia">Malaysia</option>
+                <option value="Maldives">Maldives</option>
+                <option value="Mali">Mali</option>
+                <option value="Malta">Malta</option>
+                <option value="Marshall Islands">Marshall Islands</option>
+                <option value="Martinique">Martinique</option>
+                <option value="Mauritania">Mauritania</option>
+                <option value="Mauritius">Mauritius</option>
+                <option value="Mayotte">Mayotte</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Micronesia, Federated States of">Micronesia</option>
+                <option value="Moldova, Republic of">Moldova</option>
+                <option value="Monaco">Monaco</option>
+                <option value="Mongolia">Mongolia</option>
+                <option value="Montenegro">Montenegro</option>
+                <option value="Montserrat">Montserrat</option>
+                <option value="Morocco">Morocco</option>
+                <option value="Mozambique">Mozambique</option>
+                <option value="Myanmar">Myanmar</option>
+                <option value="Namibia">Namibia</option>
+                <option value="Nauru">Nauru</option>
+                <option value="Nepal">Nepal</option>
+                <option value="Netherlands">Netherlands</option>
+                <option value="New Caledonia">New Caledonia</option>
+                <option value="New Zealand">New Zealand</option>
+                <option value="Nicaragua">Nicaragua</option>
+                <option value="Niger">Niger</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="Niue">Niue</option>
+                <option value="Norfolk Island">Norfolk Island</option>
+                <option value="Northern Mariana Islands">Nor. Mariana Islands</option>
+                <option value="Norway">Norway</option>
+                <option value="Oman">Oman</option>
+                <option value="Pakistan">Pakistan</option>
+                <option value="Palau">Palau</option>
+                <option value="Palestinian Territory, Occupied">Palestinian</option>
+                <option value="Panama">Panama</option>
+                <option value="Papua New Guinea">Papua New Guinea</option>
+                <option value="Paraguay">Paraguay</option>
+                <option value="Peru">Peru</option>
+                <option value="Philippines">Philippines</option>
+                <option value="Pitcairn">Pitcairn</option>
+                <option value="Poland">Poland</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Puerto Rico">Puerto Rico</option>
+                <option value="Qatar">Qatar</option>
+                <option value="Reunion">Reunion</option>
+                <option value="Romania">Romania</option>
+                <option value="Russian Federation">Russian Federation</option>
+                <option value="Rwanda">Rwanda</option>
+                <option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                <option value="Saint Lucia">Saint Lucia</option>
+                <option value="Saint Vincent and the Grenadines">Saint Vincent</option>
+                <option value="Samoa">Samoa</option>
+                <option value="San Marino">San Marino</option>
+                <option value="Sao Tome and Principe">Sao Tome</option>
+                <option value="Saudi Arabia">Saudi Arabia</option>
+                <option value="Senegal">Senegal</option>
+                <option value="Serbia">Serbia</option>
+                <option value="Seychelles">Seychelles</option>
+                <option value="Sierra Leone">Sierra Leone</option>
+                <option value="Singapore">Singapore</option>
+                <option value="Sint Maarten (Dutch part)">Sint Maarten</option>
+                <option value="Slovakia">Slovakia</option>
+                <option value="Slovenia">Slovenia</option>
+                <option value="Solomon Islands">Solomon Islands</option>
+                <option value="Somalia">Somalia</option>
+                <option value="South Africa">South Africa</option>
+                <option value="South Sudan">South Sudan</option>
+                <option value="Spain">Spain</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Sudan">Sudan</option>
+                <option value="Suriname">Suriname</option>
+                <option value="Swaziland">Swaziland</option>
+                <option value="Sweden">Sweden</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Syria">Syria</option>
+                <option value="Tahiti">Tahiti</option>
+                <option value="Taiwan">Taiwan</option>
+                <option value="Tajikistan">Tajikistan</option>
+                <option value="Tanzania">Tanzania</option>
+                <option value="Thailand">Thailand</option>
+                <option value="Togo">Togo</option>
+                <option value="Tokelau">Tokelau</option>
+                <option value="Tonga">Tonga</option>
+                <option value="Trinidad and Tobago">Trinidad and Tobago</option>
+                <option value="Tunisia">Tunisia</option>
+                <option value="Turkey">Turkey</option>
+                <option value="Turkmenistan">Turkmenistan</option>
+                <option value="Turks and Caicos Islands">Turks Islands</option>
+                <option value="Tuvalu">Tuvalu</option>
+                <option value="Uganda">Uganda</option>
+                <option value="Ukraine">Ukraine</option>
+                <option value="United Arab Emirates">United Arab Emirates</option>
+                <option value="United Kingdom">United Kingdom</option>
+                <option value="United States of America">United States of America</option>
+                <option value="Uruguay">Uruguay</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+                <option value="Vanuatu">Vanuatu</option>
+                <option value="Vatican City State">Vatican City State</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Vietnam">Vietnam</option>
+                <option value="Virgin Islands (British)">Virgin Islands (British)</option>
+                <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                <option value="Wake Island">Wake Island</option>
+                <option value="Wallis and Futuna">Wallis and Futuna</option>
+                <option value="Yemen">Yemen</option>
+                <option value="Zambia">Zambia</option>
+                <option value="Zimbabwe">Zimbabwe</option>
+            </select>
+          </div>
+          <div id="info7" class="pb-5">
+            <i class="fa-solid fa-phone text-white bg-purple-600 p-2 rounded"></i>
+            <select id="countryCode" name="countryCode" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+                <option value="+91">+91</option>
+            </select>
+            <input type="number" name="phoneNo" id="phoneNo" placeholder="Enter your 10 Digit Number" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+          </div>
+          <div id="info8" class="pb-5">
+            <i class="fa-solid fa-envelope text-white bg-purple-600 p-2 rounded"></i>
+            <input type="email" name="gmail" id="gmail" placeholder="Enter your Email" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+          </div>
+          <div id="info9" class="pb-5 ms-1">
+            <span class="text-center"><input type="checkbox" name="termsCheck" id="termsCheck" class="me-5">I Accept the <a href="" class="underline">TERMS & CONDITIONS</a> and <a href="" class="underline">PRIVACY POLICY</a></span>
+          </div>
+          <div id="info10" class="flex justify-center mt-5">
+            <a href="" class="px-3 py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500">Login or Register</a>
+          </div>
+        </form>
+    </div>
+  </section>
+  <section id="about">
+    <div id="filter" class="bg-white rounded-2xl px-10 flex gap-10 justify-center items-center mx-auto py-10 flex-row flex-wrap">
+      <div id="filter1" class="flex flex-col gap-5">
+        <label for="">Looking For</label>
+        <select name="" id="">
+          <option value="Bride">Bride</option>
+          <option value="Groom">Groom</option>
+        </select>
+      </div>
+      <div id="filter2" class="flex flex-col gap-5">
+        <label for="">Age</label>
+        <div class="age flex gap-5 md:flex-row flex-col">
+          <select name="" id="ageFrom">
+          </select>
+          <p>to</p>
+          <select name="" id="ageTo">
+            <option value="27 years">27 years</option>
+          </select>
+        </div>
+      </div>
+      <div id="filter3" class="flex flex-col gap-5">
+        <label for="">Religion</label>
+        <select name="religion" id="religion" class="">
+          <option value="">Select your Religion</option>
+          <option value="Hinduism">Hinduism</option>
+          <option value="Christianity">Christianity</option>
+          <option value="Islam">Islam</option>
+          <option value="Jainism">Jainism</option>
+          <option value="Sikhism">Sikhism</option>
+          <option value="Buddhism">Buddhism</option>
+          <option value="Others">Others</option>
+      </select>
+      </div>
+      <div id="filter4" class="flex flex-col gap-5">
+        <label for="">Select Caste</label>
+        <select name="caste" id="caste" class="caste">
+          <option value="">Select your Caste</option>
+          <option value="Brahmins">Brahmins</option>
+          <option value="Kshatriyas">Kshatriyas</option>
+          <option value="Vaishyas">Vaishyas</option>
+          <option value="Shudras">Shudras</option>
+          <option value="Scheduled Castes (SC)">Scheduled Castes (SC)</option>
+          <option value="Scheduled Tribes (ST)">Scheduled Tribes (ST)</option>
+          <option value="Other Backward Classes (OBC)">Other Backward Classes (OBC)</option>
+      </select>
+      </div>
+      <div id="filter-btn">
+        <a href="" class="px-2 py-1 md:px-3 md:py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500">Search now</a>
+      </div>
+    </div>
+    <div id="about-container" class="pt-32">
+      <p class="text-3xl lg:text-5xl text-white text-center font-bold px-10" style="margin-top: -60px;">Welcome to matrimony.com</p>
+      <p class="text-white text-center px-10 lg:px-56 pt-10 lg:text-2xl text-1xl">Best matrimony serive provider in India. We find the best perfect life partner for you. join us now and find you life partner from our thousand's of verified profiles</p>
+      <div id="design" class="lg:pt-10 md:pt-36">
+        <img src="design.png" alt="">
+      </div>
+      <div id="profiles" class="flex flex-col lg:flex-row justify-center items-center px-10 pt-56 ">
+        <div id="profile-info" class="flex lg:flex justify-center items-center flex-col gap-5">
+          <img src="profile1.jpg" alt="" class="rounded-2xl">
+          <p class="text-white text-center px-5">Bonnie and Clyde</p>
+          <p class="text-white text-center lg:px-10 md:px-1 ">"If i get married, I want to be vary married."</p>
+        </div>
+        <div id="profile-info" class="hidden lg:flex justify-center items-center flex-col gap-5">
+          <img src="profile2.jpg" alt="" class="rounded-2xl">
+          <p class="text-white text-center px-5">Bonnie and Clyde</p>
+          <p class="text-white text-center lg:px-10 ">"If i get married, I want to be vary married."</p>
+        </div>
+        <div id="profile-info" class="hidden lg:flex justify-center items-center flex-col gap-5">
+          <img src="profile3.jpg" alt="" class="rounded-2xl">
+          <p class="text-white text-center px-5">Bonnie and Clyde</p>
+          <p class="text-white text-center lg:px-10 ">"If i get married, I want to be vary married."</p>
+        </div>
+        <div id="profile-info" class="hidden lg:flex justify-center items-center flex-col gap-5">
+          <img src="profile4.jpg" alt="" class="rounded-2xl">
+          <p class="text-white text-center px-5">Bonnie and Clyde</p>
+          <p class="text-white text-center lg:px-10 ">"If i get married, I want to be vary married."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="members" class="bg-white w-full">
+    <p class="text-center lg:text-2xl mt-28">Our Members</p>
+    <p class=" text-3xl lg:text-4xl font-semibold text-center mt-5 px-5">Start Looking for Your Partner</p>
+    <div id="buttom" class="flex justify-center items-center gap-5 pt-10">
+      <button id="all" class="px-5 py-2 rounded border border-gray-400 active text-xs lg:text-sm">All</button>
+      <button id="men" class="px-5 py-2 rounded border border-gray-400 text-xs lg:text-sm"><i class="fa-solid fa-person pe-3"></i>Men</button>
+      <button id="women" class="px-5 py-2 rounded border border-gray-400 text-xs lg:text-sm"><i class="fa-solid fa-person-dress pe-3"></i>Women</button>
+    </div>
+    <div id="all" class="flex justify-center items-center gap-10 flex-wrap mx-auto mt-10 mb-10 lg:px-40">
+      <div id="member1" class="rounded">
+          <p class="text-white">Jessie Valenzuela</p> <span><i class="fa-solid fa-circle text-green-400"></i></span>
+      </div>
+      <div id="member2" class="rounded">
+        <p class="text-white">Jessie Valenzuela</p> <span><i class="fa-solid fa-circle text-green-400"></i></span>
+      </div>
+      <div id="member3" class="rounded">
+        <p class="text-white">Jessie Valenzuela</p> <span><i class="fa-solid fa-circle text-green-400"></i></span>
+      </div>
+      <div id="member4" class="rounded">
+        <p class="text-white">Jessie Valenzuela</p> <span><i class="fa-solid fa-circle text-green-400"></i></span>
+      </div>
+      <div id="member5" class="rounded hidden lg:flex">
+        <p class="text-white">Jessie Valenzuela</p> <span><i class="fa-solid fa-circle text-green-400"></i></span>
+      </div>
+      <div id="member6" class="rounded hidden lg:flex">
+        <p class="text-white">Jessie Valenzuela</p> <span><i class="fa-solid fa-circle text-green-400"></i></span>
+      </div>
+      <div id="member7" class="rounded hidden lg:flex">
+        <p class="text-white">Jessie Valenzuela</p> <span><i class="fa-solid fa-circle text-green-400"></i></span>
+      </div>
+      <div id="member8" class="rounded hidden lg:flex">
+        <p class="text-white">Jessie Valenzuela</p> <span><i class="fa-solid fa-circle text-green-400"></i></span>
+      </div>
+    </div>
+    <div id="seemore-btn" class="flex justify-center mb-24">
+      <a href="" class="border-purple-500 border-2 px-10 py-5 text-center rounded hover:bg-purple-500 hover:text-white">See More</a>
+    </div>
+  </section>
+
+  <section id="about2" class="w-full py-14 bg-gray-200">
+    <p class="pt-14 text-2xl lg:text-5xl text-black text-center font-bold px-10">Welcome to matrimony.com</p>
+    <p class="text-black text-center px-10 lg:px-56 pt-6 lg:pt-10 text-xs lg:text-1xl">Best matrimony serive provider in India. We find the best perfect life partner for you. join us now and find you life partner from our thousand's of verified profiles</p>
+    <div id="boxs" class="mx-auto mt-14 flex flex-wrap justify-center">
+      <div id="box" class="w-52 h-52 px-6 py-10 bg-white m-3 w-1/4 rounded flex justify-center flex-col items-center">
+        <i class="fa-solid fa-user text-5xl"></i>
+        <p class="text-1xl font-semibold py-3">Success Story</p>
+        <p class="text-xs text-center">Hundred's of sucessfull member found theris soulmates with us.</p>
+      </div>
+      <div id="box" class="w-52 h-52 px-6 py-10 bg-white m-3 w-1/4 rounded flex justify-center flex-col items-center">
+        <i class="fa-solid fa-user text-5xl"></i>
+        <p class="text-1xl font-semibold py-3">Success Story</p>
+        <p class="text-xs text-center">Hundred's of sucessfull member found theris soulmates with us.</p>
+      </div>
+      <div id="box" class="w-52 h-52 px-6 py-10 bg-white m-3 w-1/4 rounded flex justify-center flex-col items-center">
+        <i class="fa-solid fa-user text-5xl"></i>
+        <p class="text-1xl font-semibold py-3">Success Story</p>
+        <p class="text-xs text-center">Hundred's of sucessfull member found theris soulmates with us.</p>
+      </div>
+      <div id="box" class="w-52 h-52 px-6 py-10 bg-white m-3 w-1/4 rounded flex justify-center flex-col items-center">
+        <i class="fa-solid fa-user text-5xl"></i>
+        <p class="text-1xl font-semibold py-3">Success Story</p>
+        <p class="text-xs text-center">Hundred's of sucessfull member found theris soulmates with us.</p>
+      </div>
+    </div>
+  </section>
+    <!-- custom script link -->
+    <script src="script.js"></script>
+  </body>
+</html>
