@@ -85,3 +85,17 @@ womenButton.addEventListener('click', () => {
   menButton.classList.remove('active');
   womenButton.classList.add('active');
 });
+
+// mobile nav
+document.getElementById('nav-icon').addEventListener('click', function() {
+    const navIcon = document.getElementById('mobile-nav-links');
+    const hasBlockClass = navIcon.classList.contains('hidden');
+    
+    if (hasBlockClass) {
+      navIcon.classList.remove('hidden');
+      navIcon.classList.add('block');
+    } else {
+      navIcon.classList.remove('block');
+      navIcon.classList.add('hidden');
+    }
+  });

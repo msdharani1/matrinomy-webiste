@@ -19,7 +19,7 @@
   </head>
   <body class="">
     <!-- Header section -->
-<header class="bg-white w-full flex py-5 px-4 justify-between shadow-md md:py-7 md:px-20">
+<header class="bg-white w-full flex py-5 px-4 justify-between shadow-md md:py-7 md:px-10 fixed">
     <a href="" class="text-2xl md:text-3xl text-red-500 font-medium">matrimony.com</a>
     <nav id="nav-links" class="lg:block hidden">
       <ul class="flex items-center">
@@ -32,71 +32,78 @@
         </li>
       </ul>
     </nav>
+    <i class="fa-solid fa-bars lg:hidden text-2xl bg-purple-600 text-white py-1 px-2.5 rounded cursor-pointer" id="nav-icon"></i>
   </header>
+  <nav id="mobile-nav-links" class="lg:hidden hidden mt-14 pb-10 fixed top-5 bg-white w-full drop-shadow ">
+    <ul class="flex flex-col items-center gap-2">
+      <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Home</a></li>
+      <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Members</a></li>
+      <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Profile</a></li>
+      <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Contact Us</a></li>
+      <li class="px-1 py-1 md:px-3 md:py-2">
+        <a href="" class="px-2 py-1 md:px-3 md:py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500">Login or Register</a>
+      </li>
+    </ul>
+  </nav>
   <section id="hero">
     <div id="form" class="bg-white py-10 lg:mx-4 rounded-2xl">
-      <p class="uppercase text-xl font-bold pt-5 pb-5 md:text-2xl">Register now</p>
+      <p class="uppercase text-sm font-bold pt-5 pb-5 md:text-2xl">Register now</p>
         <form action="">
-          <div id="info1" class="py-5 w-full">
-            <i class="fa-solid fa-user text-white bg-purple-600 p-2 rounded"></i>
+          <div id="info1" class="py-2 lg:py-5 w-full">
+            <i class="fa-solid fa-user text-white bg-purple-600 px-2 py-1 lg:p-2 rounded text-xs lg:text-base"></i>
             <input
               type="text"
               name="profile"
               id="profile"
               placeholder="Profile Created By"
-              class="border-gray-100 border-2 rounded ps-2 py-1 bg-white"
+              class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base"
             />
             <br class="block md:hidden">
             <br class="block md:hidden">
-            <select name="age" id="age" class="border-gray-100 border-2 rounded ps-2 py-1 px-16 bg-white">
-              <i class="fa-solid fa-venus-mars text-white bg-purple-600 p-2 rounded"></i>
+            <i class="fa-solid fa-user text-white bg-purple-600 px-2 py-1 lg:p-2 rounded text-xs lg:text-base lg:hidden md:hidden"></i>
+            <select name="age" id="age" class="border-gray-100 border-2 rounded ps-2 py-1 px-16 bg-white text-xs lg:text-base">
               <option value="">Select Gender</option>
               <option value="Make">Male</option>
               <option value="Female">Female</option>
               <option value="Others">Others</option>
             </select>
           </div>
-          <div id="info2" class="pb-5">
-            <i class="fa-solid fa-user text-white bg-purple-600 p-2 rounded"></i>
+          <div id="info2" class="py-2 lg:pb-5">
+            <i class="fa-solid fa-user text-white bg-purple-600 px-2 py-1 lg:p-2 rounded text-xs lg:text-base"></i>
             <input
               type="text"
               name="firstName"
               id="firstName"
               placeholder="Enter First name"
-              class="border-gray-100 border-2 rounded ps-2 py-1 bg-white"
+              class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base"
             />
-            <br class="block md:hidden">
-            <br class="block md:hidden">
             <input
               type="text"
               name="lastName"
               id="lastName"
               placeholder="Enter last name"
-              class="border-gray-100 border-2 rounded ps-2 py-1 bg-white"
+              class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base"
             />
           </div>
-          <div id="info3" class="pb-5">
-            <i class="fa-solid fa-calendar text-white bg-purple-600 p-2 rounded"></i>
-            <select id="day" name="day" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+          <div id="info3" class="py-2 lg:pb-5">
+            <i class="fa-solid fa-calendar text-white bg-purple-600 px-2 py-1 lg:p-2 rounded text-xs lg:text-base"></i>
+            <select id="day" name="day" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
                 <option value="">Date</option>
                 <!-- Dynamically populate options for days -->
             </select>
-            <br class="block md:hidden">
-            <br class="block md:hidden">
-            <select id="month" name="month" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+
+            <select id="month" name="month" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
                 <option value="">Month</option>
                 <!-- Dynamically populate options for months -->
             </select>
-            <br class="block md:hidden">
-            <br class="block md:hidden">
-            <select id="year" name="year" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+            <select id="year" name="year" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
                 <option value="">Year</option>
                 <!-- Dynamically populate options for years -->
             </select>
           </div>
-          <div id="info4" class="pb-5">
-            <i class="fa-solid fa-hands-praying text-white bg-purple-600 py-2 px-1.5 rounded"></i>
-            <select name="religion" id="religion" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+          <div id="info4" class="py-2 lg:pb-5">
+            <i class="fa-solid fa-hands-praying text-white bg-purple-600 px-1.5 py-1.5 lg:py-2 lg:px-1.5 rounded text-xs lg:text-base"></i>
+            <select name="religion" id="religion" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
                 <option value="">Select your Religion</option>
                 <option value="Hinduism">Hinduism</option>
                 <option value="Christianity">Christianity</option>
@@ -107,9 +114,9 @@
                 <option value="Others">Others</option>
             </select>
           </div>
-          <div id="info5" class="pb-5">
-            <i class="fa-solid fa-people-group text-white bg-purple-600 py-2 px-1.5 rounded"></i>
-            <select name="caste" id="caste" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+          <div id="info5" class="py-2 lg:pb-5">
+            <i class="fa-solid fa-people-group text-white bg-purple-600 px-1.5 py-1.5 lg:py-2 lg:px-1.5 rounded text-xs lg:text-base"></i>
+            <select name="caste" id="caste" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
                 <option value="">Select your Caste</option>
                 <option value="Brahmins">Brahmins</option>
                 <option value="Kshatriyas">Kshatriyas</option>
@@ -120,15 +127,16 @@
                 <option value="Other Backward Classes (OBC)">Other Backward Classes (OBC)</option>
             </select>
           </div>
-          <div id="info6" class="flex pb-5 flex-col lg:flex-row">
+          <div id="info6" class="flex py-2 lg:pb-5 flex-col lg:flex-row">
            <div class="item1 flex">
-            <div class="text-white bg-purple-600 py-1.5 px-1.5 rounded w-8">
+            <i class="fa-solid fa-a text-white bg-purple-600 px-2 py-1 lg:py-2 lg:px-1.5 rounded text-xs lg:text-base lg:hidden"></i>
+            <div class="text-white bg-purple-600 py-1.5 px-1.5 rounded w-8 hidden lg:block">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
                 <path d="M7.75 2.75a.75.75 0 0 0-1.5 0v1.258a32.987 32.987 0 0 0-3.599.278.75.75 0 1 0 .198 1.487A31.545 31.545 0 0 1 8.7 5.545 19.381 19.381 0 0 1 7 9.56a19.418 19.418 0 0 1-1.002-2.05.75.75 0 0 0-1.384.577 20.935 20.935 0 0 0 1.492 2.91 19.613 19.613 0 0 1-3.828 4.154.75.75 0 1 0 .945 1.164A21.116 21.116 0 0 0 7 12.331c.095.132.192.262.29.391a.75.75 0 0 0 1.194-.91c-.204-.266-.4-.538-.59-.815a20.888 20.888 0 0 0 2.333-5.332c.31.031.618.068.924.108a.75.75 0 0 0 .198-1.487 32.832 32.832 0 0 0-3.599-.278V2.75Z" />
                 <path fill-rule="evenodd" d="M13 8a.75.75 0 0 1 .671.415l4.25 8.5a.75.75 0 1 1-1.342.67L15.787 16h-5.573l-.793 1.585a.75.75 0 1 1-1.342-.67l4.25-8.5A.75.75 0 0 1 13 8Zm2.037 6.5L13 10.427 10.964 14.5h4.073Z" clip-rule="evenodd" />
               </svg>
             </div>
-            <select name="motherTongue" id="motherTongue" class="ms-1 border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+            <select name="motherTongue" id="motherTongue" class="ms-1 border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
                 <option value="">Mother Tongue</option>
                 <option value="Assamese">Assamese</option>
                 <option value="Bengali">Bengali</option>
@@ -155,7 +163,9 @@
             </select>
            </div>
            <br class="block md:hidden">
-            <select name="country" id="country" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+            <div>
+              <i class="fa-solid fa-earth-americas text-white bg-purple-600 px-2 py-1 lg:py-2 lg:px-1.5 rounded text-xs lg:text-base lg:hidden"></i>
+            <select name="country" id="country" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
                 <option value="">country</option>
                 <option value="Afghanistan">Afghanistan</option>
                 <option value="Åland Islands">Åland Islands</option>
@@ -262,7 +272,7 @@
                 <option value="India">India</option>
                 <option value="Indonesia">Indonesia</option>
                 <option value="Iran, Islamic Republic of">Iran</option>
-                <option value="Iraq">Iraq</option
+                <option value="Iraq">Iraq</option>
                 <option value="Ireland">Ireland</option>
                 <option value="Isle of Man">Isle of Man</option>
                 <option value="Israel">Israel</option>
@@ -400,50 +410,58 @@
                 <option value="Zambia">Zambia</option>
                 <option value="Zimbabwe">Zimbabwe</option>
             </select>
+            </div>
           </div>
-          <div id="info7" class="pb-5">
-            <i class="fa-solid fa-phone text-white bg-purple-600 p-2 rounded"></i>
-            <select id="countryCode" name="countryCode" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+          <div id="info7" class="py-2 lg:pb-5">
+            <i class="fa-solid fa-phone text-white bg-purple-600 px-2 py-1.5 lg:p-2 rounded text-xs lg:text-base"></i>
+            <select id="countryCode" name="countryCode" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
                 <option value="+91">+91</option>
             </select>
-            <input type="number" name="phoneNo" id="phoneNo" placeholder="Enter your 10 Digit Number" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+            <input type="number" name="phoneNo" id="phoneNo" placeholder="Enter your 10 Digit Number" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
           </div>
-          <div id="info8" class="pb-5">
-            <i class="fa-solid fa-envelope text-white bg-purple-600 p-2 rounded"></i>
-            <input type="email" name="gmail" id="gmail" placeholder="Enter your Email" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white">
+          <div id="info8" class="py-2 lg:pb-5">
+            <i class="fa-solid fa-envelope text-white bg-purple-600 px-2 py-1 lg:p-2 rounded text-xs lg:text-base"></i>
+            <input type="email" name="gmail" id="gmail" placeholder="Enter your Email" class="border-gray-100 border-2 rounded ps-2 py-1 bg-white text-xs lg:text-base">
           </div>
-          <div id="info9" class="pb-5 ms-1">
-            <span class="text-center"><input type="checkbox" name="termsCheck" id="termsCheck" class="me-5">I Accept the <a href="" class="underline">TERMS & CONDITIONS</a> and <a href="" class="underline">PRIVACY POLICY</a></span>
+          <div id="info9" class="py-2 lg:pb-5 ms-1">
+            <span class="text-center text-xs lg:text-base"><input type="checkbox" name="termsCheck" id="termsCheck" class="me-3 lg:me-5 text-xs lg:text-base">I Accept the <a href="" class="underline">TERMS & CONDITIONS</a> and <a href="" class="underline">PRIVACY POLICY</a></span>
           </div>
           <div id="info10" class="flex justify-center mt-5">
-            <a href="" class="px-3 py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500">Login or Register</a>
+            <a href="" class="px-3 py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500 text-xs lg:text-sm">Login or Register</a>
           </div>
         </form>
     </div>
   </section>
   <section id="about">
-    <div id="filter" class="bg-white rounded-2xl px-10 flex gap-10 justify-center items-center mx-auto py-10 flex-row flex-wrap">
+    <div id="filter" class="bg-white rounded-2xl px-10 flex gap-5 lg:gap-10 justify-center md:justify-between lg:justify-center items-center mx-auto py-10 flex-row flex-wrap">
       <div id="filter1" class="flex flex-col gap-5">
-        <label for="">Looking For</label>
-        <select name="" id="">
+        <label for="" class="text-xs lg:text-base">Looking For</label>
+        <select name="" id="" class="text-xs lg:text-base">
           <option value="Bride">Bride</option>
           <option value="Groom">Groom</option>
         </select>
       </div>
       <div id="filter2" class="flex flex-col gap-5">
-        <label for="">Age</label>
-        <div class="age flex gap-5 md:flex-row flex-col">
-          <select name="" id="ageFrom">
+        <label for="" class="text-xs lg:text-base">Age</label>
+        <div class="age gap-5 md:flex-row flex-col hidden lg:flex">
+          <select name="" id="ageFrom" class="text-xs lg:text-base">
           </select>
           <p>to</p>
-          <select name="" id="ageTo">
+          <select name="" id="ageTo" class="text-xs lg:text-base">
             <option value="27 years">27 years</option>
+          </select>
+        </div>
+        <div class="age flex gap-5 md:flex-row flex-col block lg:hidden">
+          <select name="" id="ageFromTO" class="text-xs lg:text-base">
+            <option value="18 to 25 years">18 to 25 years</option>
+            <option value="26 to 35 years">26 to 35 years</option>
+            <option value="36+ years">36+ years</option>
           </select>
         </div>
       </div>
       <div id="filter3" class="flex flex-col gap-5">
-        <label for="">Religion</label>
-        <select name="religion" id="religion" class="">
+        <label for="" class="text-xs lg:text-base">Religion</label>
+        <select name="religion" id="religion" class="text-xs lg:text-base">
           <option value="">Select your Religion</option>
           <option value="Hinduism">Hinduism</option>
           <option value="Christianity">Christianity</option>
@@ -455,8 +473,8 @@
       </select>
       </div>
       <div id="filter4" class="flex flex-col gap-5">
-        <label for="">Select Caste</label>
-        <select name="caste" id="caste" class="caste">
+        <label for="" class="text-xs lg:text-base">Select Caste</label>
+        <select name="caste" id="caste" class="caste text-xs lg:text-base">
           <option value="">Select your Caste</option>
           <option value="Brahmins">Brahmins</option>
           <option value="Kshatriyas">Kshatriyas</option>
@@ -468,7 +486,7 @@
       </select>
       </div>
       <div id="filter-btn">
-        <a href="" class="px-2 py-1 md:px-3 md:py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500">Search now</a>
+        <a href="" class="px-2 py-1 md:px-3 md:py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500 text-xs lg:text-base">Search now</a>
       </div>
     </div>
     <div id="about-container" class="pt-32">
@@ -539,7 +557,6 @@
       <a href="" class="border-purple-500 border-2 px-10 py-5 text-center rounded hover:bg-purple-500 hover:text-white">See More</a>
     </div>
   </section>
-
   <section id="about2" class="w-full py-14 bg-gray-200">
     <p class="pt-14 text-2xl lg:text-5xl text-black text-center font-bold px-10">Welcome to matrimony.com</p>
     <p class="text-black text-center px-10 lg:px-56 pt-6 lg:pt-10 text-xs lg:text-1xl">Best matrimony serive provider in India. We find the best perfect life partner for you. join us now and find you life partner from our thousand's of verified profiles</p>
@@ -566,6 +583,39 @@
       </div>
     </div>
   </section>
+  <footer class="bg-purple-500 w-full">
+    <div id="footer-container" class="flex py-20 lg:justify-center lg:items-start flex-wrap">
+      <div id="f1" class="p-5 flex flex-col gap-5">
+        <p class="text-gray-200 text-2xl font-semibold">About Us</p>
+        <p class="text-gray-300">Arranged Marriage helps you find our perfect soulmate. Join tofay and searching for your partner right away.</p>
+      </div>
+      <div id="f2" class="p-5 flex flex-col gap-5">
+        <p class="text-gray-200 text-2xl font-semibold">Quick Links</p>
+        <ul>
+          <li class="pb-3"><a href="" class="text-gray-300 hover:underline hover:text-gray-200">Home</a></li>
+          <li class="pb-3"><a href="" class="text-gray-300 hover:underline hover:text-gray-200">Members</a></li>
+          <li class="pb-3"><a href="" class="text-gray-300 hover:underline hover:text-gray-200">Profiles</a></li>
+          <li class="pb-3"><a href="" class="text-gray-300 hover:underline hover:text-gray-200">Contact Us</a></li>
+        </ul>
+      </div>
+      <div id="f3" class="p-5 flex flex-col gap-5">
+        <p class="text-gray-200 text-2xl font-semibold">Contact Details</p>
+        <p class="text-gray-300"><i class="fa-solid fa-location-dot pe-4 text-gray-100"></i>Tamilnadu</p>
+        <p class="text-gray-300"><i class="fa-solid fa-envelope pe-4 text-gray-100"></i>contactarrangemarriage@gmail.com</p>
+        <p class="text-gray-300"><i class="fa-solid fa-phone pe-4 text-gray-100"></i>+91 1234567890</p>
+      </div>
+      <div id="f4" class="p-5 flex flex-col gap-5">
+        <p class="text-gray-200 text-2xl font-semibold">Subscribe To Newsletter</p>
+        <p class="text-gray-300 ">Be the first one to know about out new features, updates and many more.</p>
+        <div id="f-news-btn">
+          <input type="email" name="" id="newletter" placeholder="Email Address" class="py-1 px-3 bg-transparent text-white border-white border-2 w-48">
+          <i class="fa-solid fa-paper-plane bg-white px-3 py-2.5 text-red-600 cursor-pointer" id="news-btn"></i>  
+      </div>
+    </div>
+    </div>
+    <div id="f-bottom">
+    </div>
+  </footer>
     <!-- custom script link -->
     <script src="script.js"></script>
   </body>

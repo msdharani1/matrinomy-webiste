@@ -15,7 +15,7 @@ img{
     background-size: cover;
     width: 100%;
     height: auto;
-    padding: 50px 50px 150px 50px;
+    padding: 150px 50px 150px 50px;
 }
 #form{
     width: 550px;
@@ -38,8 +38,11 @@ img{
 }
 #filter{
     /* height: 150px; */
-    width: 90%;
+    width: 83%;
     margin-top: -130px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin: auto;
 }
 #profiles{
     height: 400px;
@@ -187,19 +190,102 @@ label{
 .active {
     background-color: #d1d5db !important; /* Gray 300 */
   }
+#news-btn{
+    position: relative;
+    right: 5px;
+    top: 1px;
+}
+#f1{
+    width: 20%;
+}
+#f2{
+    width: 15%;
+}
+#f3{
+    width: 30%;
+}
+#f4{
+    width: 25%;
+}
 
+@media (max-width: 580px) {
+    #f1{
+        width: 100%;
+    }
+    #f2{
+        width: 100%;
+    }
+    #f3{
+        width: 100%;
+    }
+    #f4{
+        width: 100%;
+    }
+    #footer-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
 /* Target smaller screens first */
-@media screen and (max-width: 768px) {
+@media (max-width: 1050px) and (min-width: 580px){
+    #f1{
+        width: 55%;
+    }
+    #f2{
+        width: 45%;
+    }
+    #f3{
+        width: 55%;
+    }
+    #f4{
+        width: 45%;
+    }
+}
+input:focus {
+    border-color: #d1d5db!important; /* Change this to your desired color */
+    box-shadow: 0 0 20px #fff; /* Add a box shadow for visual effect */
+}
+@media (min-width: 1024px){
+    #day{
+        width: 25%;
+    }
+    #month{
+        width: 35%;
+    }
+    #year{
+        width: 30%;
+    }
+    #religion{
+        width: 90%;
+    }
+    #caste{
+        width: 90%;
+    }
+    #phoneNo{
+        width: 75%
+     }
+    #country{
+        margin-left: 13%;
+    }
+    #gmail{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 768px){
+    
+
     #hero {
         height: auto;
         padding: 40px 20px;
         padding-bottom: 100px;
         display: flex;
         justify-content: center;
+        padding-top: 100px;
     }
     #form{
         justify-content: center;
-        width: 80%;
+        /* width: 93%; */
         padding: 20px 20px;
         /* padding: 10px 30px; */
     }
@@ -212,17 +298,33 @@ label{
         width: 85%;
      }
      #countryCode{
-        width: 22%!important;
+        width: 20%!important;
      }
-     #age,
+     #firstName,
+     #lastName{
+        width: 42.5%;
+     }
+     #day{
+        width: 23%;
+     }
+     #month{
+        width: 30%;
+     }
+     #year{
+        width: 30%;
+     }
+     /* #age,
      #lastName,
      #month,
      #year,
      #country{
         width: 90%!important;
-     }
+     } */
      #phoneNo{
-        width: 55%!important;
+        width: 63%!important;
+     }
+     #gmail{
+        width: 85%;
      }
      /* #into1,
      #info2,
