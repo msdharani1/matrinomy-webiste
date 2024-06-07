@@ -8,6 +8,18 @@ img{
     -webkit-user-drag: none;
     user-select: none;
 }
+#into1,
+#info2,
+#info3,
+#info4,
+#info5,
+#info6,
+#info7,
+#info8,
+#info9,
+#info10{
+    margin: auto;
+}
 #hero{
     background-image: url('bk.png');
     background-position: center;
