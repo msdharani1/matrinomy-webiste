@@ -21,7 +21,7 @@ img{
     margin: auto;
 }
 #hero{
-    background-image: url('bk.png');
+    background-image: url('images/bk.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +38,7 @@ img{
     flex-wrap: wrap;
 }
 #about{
-    background-image: url('bk2.png');
+    background-image: url('/images/bk2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -88,7 +88,7 @@ label{
     font-weight:600;
 }
 #member1{
-    background-image: url('member1.jpg');
+    background-image: url('images/member1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -102,7 +102,7 @@ label{
     border-image: fill 0 linear-gradient(#0001, #000);
 }
 #member2{
-    background-image: url('member2.jpg');
+    background-image: url('images/member2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -116,7 +116,7 @@ label{
     border-image: fill 0 linear-gradient(#0001, #000);
 }
 #member3{
-    background-image: url('member3.jpg');
+    background-image: url('images/member3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -130,7 +130,7 @@ label{
     border-image: fill 0 linear-gradient(#0001, #000);
 }
 #member4{
-    background-image: url('member4.jpg');
+    background-image: url('images/member4.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -144,7 +144,7 @@ label{
     border-image: fill 0 linear-gradient(#0001, #000);
 }
 #member5{
-    background-image: url('member1.jpg');
+    background-image: url('images/member1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -158,7 +158,7 @@ label{
     border-image: fill 0 linear-gradient(#0001, #000);
 }
 #member6{
-    background-image: url('member2.jpg');
+    background-image: url('images/member2.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -172,7 +172,7 @@ label{
     border-image: fill 0 linear-gradient(#0001, #000);
 }
 #member7{
-    background-image: url('member3.jpg');
+    background-image: url('images/member3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -186,7 +186,7 @@ label{
     border-image: fill 0 linear-gradient(#0001, #000);
 }
 #member8{
-    background-image: url('member4.jpg');
+    background-image: url('images/member4.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

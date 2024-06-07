@@ -1,0 +1,331 @@
+/* google fonts link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ #hero{
+    background-image: url('bk.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 850px;
+}
+#form{
+    position: relative;
+    top: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main-container{
+    width: 100%;
+    display: flex;
+    /* height: 200vh; */
+    margin-top: 10px;
+}
+
+.main-container > .filter{
+    flex-basis: 20%;
+}
+
+.main-container > .search-result{
+    flex-basis: 80%;
+}
+
+.main-container > .filter > .main-filter{
+    padding: 8px 10px;
+    border-radius: 3px;
+    background-color: #85b;
+    width: 220px;
+    font-size: 15px;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.main-container > .filter > .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: inherit;
+    list-style: none;
+}
+
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+
+.main-container > .filter > .title:after{
+    content :'▼';
+    margin-left: 10px;
+}
+
+details[open] .main-container > .filter > .title:after{
+    content: '▲';
+}
+
+.main-container > .filter >.main-filter >.search-filters{
+    display: flex;
+    gap: 20px;
+}
+.main-container > .filter >.main-filter > .search-filters div {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1;
+}
+
+#gen, #religion ,#caste, #reg,#prof-type,#m-status,#age,#height,#Edu,#occ,#country_{
+    width: 90%;
+    padding-left: 20px;
+}
+
+#gen > details , #religion > details,#caste > details, #reg > details,#prof-type > details,#m-status> details,#age > details,#height>details,#Edu > details,#occ>details,#country_ > details{
+    width: 100%;
+    margin: 20px 0px;
+    border-radius: 3px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.566);
+}
+
+#gen > details > summary,  #religion > details > summary,#caste > details > summary,#reg > details > summary,#prof-type > details > summary,#m-status> details>summary,#age > details >summary,#height>details>summary,#Edu > details > summary,#occ>details>summary,#country_ > details > summary{
+    background-color: lavender;
+    font-weight: bold;
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 3px;
+}
+
+#male , #female{
+    margin-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#religion > details > #search,#Edu > details > #search,#occ > details > #search,#country_ > details > #search{
+    border-radius: 3px;
+    margin: 10px 20px;
+    width: 70%
+}
+
+#data{
+    margin-left: 20px;
+}
+
+#reg > details > label,#prof-type > details > label{
+    font-size: 13px;
+}
+#age > details > label{
+    margin-top: 10px;
+}
+
+
+
+/* right side */
+
+.main-container > .search-result{
+    width: 100%;
+}
+
+.main-container > .search-result > #search-bar{
+    width: 100%;
+    height: 60px;
+}
+.main-container > .search-result > #search-bar > input{
+    width: 80%;
+    padding: 10px;
+    margin: 6px;
+    /* box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.566); */
+    border-radius: 4px;
+}
+
+.main-container > .search-result > #search-bar > button{
+    background-color: #85b;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.main-container > .search-result >.heading{
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+/* search for res */
+
+.res1{
+    width: 100%;
+    /* height: 250px; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.res1 > .img1{
+    background-image: url('images/img1.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+.res1 > table{
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 0 0;
+}
+
+.res1 > table > tr > th , .res1 > table > tr > td{
+    padding-right: 20px;
+} 
+
+.res1 > table > caption{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.res1 > p{
+    font-size: 15px;
+    text-align: right;
+    font-weight: lighter;
+}
+
+.res1 > .btn{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.res1 > .btn > .btn1{
+    margin-bottom: 4px;
+    padding: 10px 20px;
+    background-color: #fc5;
+    border-radius: 5px;
+    color: #fff;
+}
+.res1 > .btn > .btn2{
+    margin-bottom: 4px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #85b;
+    color: #fff;
+}
+.res1 > .btn > .btn3{
+    margin-bottom: 4px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #f56;
+    color: #fff;
+}
+.fa-solid{
+    margin-right: 5px;
+}
+
+.res1 > .img2{
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    background-image: url("images/img4.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+}
+
+.res1 > .img3{
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    background-image: url("images/img2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+}
+
+.res1 > .img4{
+    margin: 30px;
+    width: 200px;
+    height: 200px;
+    background-image: url("images/img3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px){
+    .main-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container > .filter{
+        position: absolute;
+        background-color: white;
+        /* --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
+        margin-top: 20px;
+    }
+    .main-container > .filter > .main-filter{
+        width: 35px;
+ 
+    }
+    .main-container > .search-result > #search-bar {
+        margin-top: -45px;
+        width: 85%;
+    }
+    .main-container > .search-result > #search-bar > button{
+        /* width: 10%; */
+        /* height: 35px; */
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    .main-container > .search-result > #search-bar > input{
+        width: 50%;
+        height: 35px;
+    }
+    .main-container > .search-result > #search-bar{
+        position: absolute;
+        top: 152px;
+        left: 56px;
+        z-index: 0;
+    }
+    .main-container > .search-result {
+        margin-top: 80px;
+    }
+    .res1 > .img1{
+        margin: 30px;
+        width: 90%;
+        height: 350px;
+    }
+    .res1 > .img1 >img{
+        width: 100%;
+        height: inherit;
+    }
+    .res1 > .img1{
+        border-image: fill 0 linear-gradient(#0001, #000);
+    }
+        
+}
+@media (min-width: 818px) {
+    .main-container > .search-result > #search-bar {
+        width: 90%;
+    }
+}
+details{
+    user-select: none;
+}

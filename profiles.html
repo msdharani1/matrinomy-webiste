@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matrimony Site</title>
+    <!-- boxicon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- tailwaindcss cdn link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- fontawesome cdn link -->
+   <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- custom css link -->
+   <link rel="stylesheet" href="profiles.css" />
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body class="">
+    <!-- Header section -->
+    <header class="bg-white w-full flex py-5 px-4 justify-between shadow-md md:py-7 md:px-10 fixed top-0 z-10">
+      <a href="" class="text-2xl md:text-3xl text-red-500 font-medium">matrimony.com</a>
+      <nav id="nav-links" class="lg:block hidden">
+        <ul class="flex items-center">
+          <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Home</a></li>
+          <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Members</a></li>
+          <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Profile</a></li>
+          <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Contact Us</a></li>
+          <li class="px-1 py-1 md:px-3 md:py-2">
+            <a href="" class="px-2 py-1 md:px-3 md:py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500">Login or Register</a>
+          </li>
+        </ul>
+      </nav>
+      <i class="fa-solid fa-bars lg:hidden text-2xl bg-purple-600 text-white py-1 px-2.5 rounded cursor-pointer" id="nav-icon"></i>
+    </header>
+    <nav id="mobile-nav-links" class="lg:hidden hidden mt-14 pb-10 fixed top-5 bg-white w-full drop-shadow z-10">
+      <ul class="flex flex-col items-center gap-2 pt-5">
+        <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Home</a></li>
+        <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Members</a></li>
+        <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Profile</a></li>
+        <li class="px-1 py-1 md:px-3 md:py-2"><a href="" class="px-2 py-1 md:px-3 md:py-2">Contact Us</a></li>
+        <li class="px-1 py-1 md:px-3 md:py-2">
+          <a href="" class="px-2 py-1 md:px-3 md:py-2 border-2 border-purple-600 rounded-3xl bg-purple-600 text-white hover:bg-purple-500">Login or Register</a>
+        </li>
+      </ul>
+    </nav>
+  <section class="main-container mt-24 lg:mt-28">
+    <aside class="filter">
+      <details class="main-filter" onclick="drop()">
+        <summary class="title flex items-center cursor-pointer"><i class="fa-solid fa-filter"></i><span class="hidden lg:block md:block">Refine Your Search</span></summary>
+      </details>
+      <div class="search-filters w-svw lg:w-full" style="display: none; background-color: white ;">
+        <div id="gen">
+            <details>
+                <summary class="title cursor-pointer">Gender</summary>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </details>
+        </div>
+        <div id="religion">
+            <details>
+              <summary class="cursor-pointer">Religion</summary>
+              <input id="search" type="search" placeholder="enter "><i class="fa-solid fa-magnifying-glass"></i><br>
+              <input id="data" type="checkbox" id="hindu" name="religion" value="hindu">
+              <label  for="hindu">Hindu</label><br>
+              <input id="data"  type="checkbox" id="christian" name="religion" value="christian">
+              <label for="christian">Christian</label><br>
+              <input id="data" type="checkbox" id="muslim" name="religion" value="muslim">
+              <label for="muslim">Muslim</label>
+            </details>
+        </div>
+        <div id="caste">
+            <details>
+              <summary class="cursor-pointer">Caste</summary>
+              <input id="data" type="checkbox" id="oc" name="caste" value="oc">
+              <label for="oc">OC</label><br>
+              <input id="data" type="checkbox" id="obc" name="caste" value="obc">
+              <label for="obc">OBC</label><br>
+              <input id="data" type="checkbox" id="scst" name="caste" value="scst">
+              <label label for="scst">SC/ST</label>
+            </details>
+        </div>
+        <div id="reg">
+          <details>
+            <summary class="cursor-pointer">Profile Registration</summary>
+            <input id="data" type="radio" id="today" name="registration" value="today">
+            <label for="today">Registered Today</label><br>
+            <input id="data" type="radio" id="last3days" name="registration" value="last3days">
+            <label for="last3days">Registered in Last 3 Days</label><br>
+            <input id="data" type="radio" id="lastweek" name="registration" value="lastweek">
+            <label for="lastweek">Registered Last Week</label><br>
+            <input id="data" type="radio" id="lastmonth" name="registration" value="lastmonth">
+            <label for="lastmonth">Registered Last Month</label>
+          </details>
+        </div>
+        <div id="prof-type">
+          <details>
+            <summary class="cursor-pointer">Profile Type</summary>
+            <input id="data" type="radio" id="today" name="registration" value="Profile with photo">
+            <label for="today">Profile with photo</label><br>
+            <input id="data" type="radio" id="last3days" name="registration" value="Profile with horroscope">
+            <label for="last3days">Profile with horroscope</label><br>
+            <input id="data" type="radio" id="lastweek" name="registration" value="Dosn't matter">
+            <label for="lastweek">Dosn't matter</label><br>
+          </details>
+        </div>
+        <div id="m-status">
+          <details>
+            <summary class="cursor-pointer">Marital Status</summary>
+            <input id="data" type="radio" id="today" name="registration" value="Never married">
+            <label for="today">Never married</label><br>
+            <input id="data" type="radio" id="last3days" name="registration" value="Widower">
+            <label for="last3days">Widower</label><br>
+            <input id="data" type="radio" id="lastweek" name="registration" value="Diverced">
+            <label for="lastweek">Diverced</label><br>
+            <input id="data" type="radio" id="lastweek" name="registration" value="Awaiting Diverced">
+            <label for="lastweek">Awaiting Diverced</label><br>
+          </details>
+        </div>
+        <div id="age">
+          <details>
+            <summary class="cursor-pointer">Age</summary>
+            <label for="ageFrom" >From: </label>
+            <select id="ageFrom">
+            </select>
+            <label for="ageTo">To: </label>
+            <select id="ageTo">
+            </select>
+          </details>
+        </div>
+        <div id="height">
+          <details>
+            <summary class="cursor-pointer">Height</summary>
+            <label for="heightFrom">From: </label>
+            <select id="heightFrom">
+                <!-- Options will be added by JavaScript -->
+            </select><br>
+            <label for="heightTo">To: </label>
+            <select id="heightTo">
+                <!-- Options will be added by JavaScript -->
+            </select>
+          </details>
+        </div>
+        <div id="Edu">
+          <details>
+            <summary class="cursor-pointer">Education</summary>
+            <input id="search" type="search" placeholder="enter "><i class="fa-solid fa-magnifying-glass"></i><br>
+            <input id="data" type="checkbox" id="any" name="any" value="any">
+            <label  for="any">Any</label><br>
+            <input id="data"  type="checkbox" id="B.Arch" name="B.Arch" value="B.Arch">
+            <label for="B.Arch">B.Arch</label><br>
+            <input id="data" type="checkbox" id="B.Com" name="B.Com" value="B.Com">
+            <label for="B.Com">B.Com</label><br>
+            <input id="data" type="checkbox" id="B.Sc" name="B.Sc" value="B.Sc">
+            <label for="B.Com">B.Sc</label><br>
+            <input id="data" type="checkbox" id="B.Tech" name="B.Tech" value="B.Tech">
+            <label for="B.Com">B.Tech</label><br>
+            <input id="data" type="checkbox" id="B.E" name="B.E" value="B.E">
+            <label for="B.Com">B.E</label>
+          </details>
+      </div>
+      <div id="occ">
+        <details>
+          <summary class="cursor-pointer">Occupation</summary>
+          <input id="search" type="search" placeholder="enter "><i class="fa-solid fa-magnifying-glass"></i><br>
+          <input id="data" type="checkbox" id="any" name="any" value="any">
+          <label  for="any">Any</label><br>
+          <input id="data"  type="checkbox" id="Business" name="Business" value="Business">
+          <label for="B.Arch">Business</label><br>
+          <input id="data" type="checkbox" id="CivilEngineer" name="Civil Engineer" value="Civil Engineer">
+          <label for="B.Com">Civil Engineer</label><br>
+          <input id="data" type="checkbox" id="CommercialPilot" name="Commercial Pilot" value="Commercial Pilot">
+          <label for="B.Com">Commercial Pilot</label><br>
+          <input id="data" type="checkbox" id="Company secretary" name="Company secretary" value="Company secretary">
+          <label for="B.Com">Company secretary</label><br>
+          <input id="data" type="checkbox" id="Computer Professional" name="Computer Professional" value="Computer Professional">
+          <label for="B.Com">Computer Professional</label>
+        </details>
+    </div>
+    <div id="country_">
+      <details>
+        <summary class="cursor-pointer">Country</summary>
+        <input id="search" type="search" placeholder="enter "><i class="fa-solid fa-magnifying-glass"></i><br>
+        <input id="data" type="checkbox" id="India" name="India" value="India">
+        <label  for="India">India</label><br>
+        <input id="data"  type="checkbox" id="Canada" name="Canada" value="Canada">
+        <label for="Canada">Canada</label><br>
+        <input id="data" type="checkbox" id="Australia" name="Australia" value="Australia">
+        <label for="Australia">Australia</label><br>
+        <input id="data" type="checkbox" id="United States" name="United States" value="United States">
+        <label for="United States">United States</label><br>
+        <input id="data" type="checkbox" id="United Kingdom" name="United Kingdom" value="United Kingdom">
+        <label for="United Kingdom">United Kingdom</label><br>
+        <input id="data" type="checkbox" id="Africa" name="Africa" value="Africa">
+        <label for="B.Com">Africa</label>
+      </details>
+  </div>
+    </div>
+    </aside>
+
+
+    <article class="search-result md:w-11/12">
+      <div id="search-bar">
+        <input type="text" class="shadow"><button>Search</button>
+      </div>
+      <div class="heading mt-5 ms-10 lg:ms-0">
+        Your Search Results
+      </div>
+      <div class="res1 flex flex-col lg:flex lg:flex-row md:flex-row md:w-11/12">
+        <div class="img1 flex items-end justify-between px-5 py-5">
+            <!-- <img src="/images/img1.jpg" alt=""> -->
+             <p class="text-white block md:hidden lg:border-image-none lg:hidden">Timothy Stewart <i class="fa-solid fa-circle text-green-400 ps-3"></i></p>
+        </div>
+        <table cellpadding="8px" class="text-xs lg:text-1xl">
+          <caption class="pb-5 hidden lg:block ">Timothy Stewart</caption>
+          <tr>
+            <th>Age:</th>
+            <td>26</td>
+            <th class="ps-10">Height:</th>
+            <td>5ft 9in - 175cm</td>
+          </tr>
+          <tr>
+            <th>Religion:</th>
+            <td>Hindu</td>
+            <th class="ps-10">Caste:</th>
+            <td>BC</td>
+          </tr>
+          <tr>
+            <th>Location:</th>
+            <td>Chennai</td>
+            <th class="ps-10">Education:</th>
+            <td>BE(ECE)</td>
+          </tr>
+          <tr>
+            <th>Mother Tongue:</th>
+            <td>Tamil</td>
+            <th class="ps-10">Occupation:</th>
+            <td>Engineer</td>
+          </tr>
+        </table>
+        <div class="btn">
+          <p class="text-sm pb-5">Registered on: 03/05/2024</p>
+          <button class="btn1 flex items-center text-sm"><i class="fa-solid fa-list"></i><span class="hidden lg:block">Add to Shortlist</span></button><br>
+          <button class="btn2 flex items-center text-sm"><i class="fa-solid fa-message"></i><span class="hidden lg:block">Send Message</span></button><br>
+          <button class="btn3 flex items-center text-sm"><i class="fa-solid fa-ban"></i><span class="hidden lg:block">Add to Blocklist</span></button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <footer class="bg-purple-500 w-full">
+    <div id="footer-container" class="flex py-20 lg:justify-center lg:items-start flex-wrap">
+      <div id="f1" class="p-5 flex flex-col gap-5">
+        <p class="text-gray-200 text-2xl font-semibold">About Us</p>
+        <p class="text-gray-300">Arranged Marriage helps you find our perfect soulmate. Join tofay and searching for your partner right away.</p>
+      </div>
+      <div id="f2" class="p-5 flex flex-col gap-5">
+        <p class="text-gray-200 text-2xl font-semibold">Quick Links</p>
+        <ul>
+          <li class="pb-3"><a href="" class="text-gray-300 hover:underline hover:text-gray-200">Home</a></li>
+          <li class="pb-3"><a href="" class="text-gray-300 hover:underline hover:text-gray-200">Members</a></li>
+          <li class="pb-3"><a href="" class="text-gray-300 hover:underline hover:text-gray-200">Profiles</a></li>
+          <li class="pb-3"><a href="" class="text-gray-300 hover:underline hover:text-gray-200">Contact Us</a></li>
+        </ul>
+      </div>
+      <div id="f3" class="p-5 flex flex-col gap-5">
+        <p class="text-gray-200 text-2xl font-semibold">Contact Details</p>
+        <p class="text-gray-300"><i class="fa-solid fa-location-dot pe-4 text-gray-100"></i>Tamilnadu</p>
+        <p class="text-gray-300"><i class="fa-solid fa-envelope pe-4 text-gray-100"></i>contactarrangemarriage@gmail.com</p>
+        <p class="text-gray-300"><i class="fa-solid fa-phone pe-4 text-gray-100"></i>+91 1234567890</p>
+      </div>
+      <div id="f4" class="p-5 flex flex-col gap-5">
+        <p class="text-gray-200 text-2xl font-semibold">Subscribe To Newsletter</p>
+        <p class="text-gray-300 ">Be the first one to know about out new features, updates and many more.</p>
+        <div id="f-news-btn">
+          <input type="email" name="" id="newletter" placeholder="Email Address" class="py-1 px-3 bg-transparent text-white border-white border-2 w-48">
+          <i class="fa-solid fa-paper-plane bg-white px-3 py-2.5 text-red-600 cursor-pointer" id="news-btn"></i>  
+      </div>
+    </div>
+    </div>
+    <div id="f-bottom" class="flex lg:justify-between justify-center lg:flex-row flex-col items-center border-t border-gray-400 lg:mx-20 mx-5 py-10 gap-3">
+      <div>
+        <p class="text-white lg:text-1xl text-sm">&copy; 2024 Arranged Marriage. All rights reserved.</p>
+      </div>
+      <div class="flex gap-5">
+        <p class="text-gray-200 lg:text-1xl text-sm hover:underline cursor-pointer"><a href="">FAQ</a></p>
+        <p class="text-gray-200 lg:text-1xl text-sm hover:underline cursor-pointer"><a href="">Privacy Policy</a></p>
+        <p class="text-gray-200 lg:text-1xl text-sm hover:underline cursor-pointer"><a href="">Terms & Conditions</a></p>
+      </div>
+    </div>
+  </footer>
+
+    <!-- custom script link -->
+    <script src="profile.js"></script>
+  </body>
+</html>
