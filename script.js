@@ -39,16 +39,6 @@ for (let code = 1; code <= 300; code++) {
     option.textContent = `+${code}`;
     countryCodeSelect.appendChild(option);
 }
-//   10
-//   11
-//   12
-//   tc 
-//   mark 
-//   Aadhar xe
-//   com ex
-//   photo 2
-//   25k
-
 var selectElement = document.getElementById('ageFrom'); // Replace 'yourSelectId' with your actual select element ID
 for (var i = 18; i <= 40; i++) {
     var option = document.createElement('option');
