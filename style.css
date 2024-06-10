@@ -21,7 +21,7 @@ img{
     margin: auto;
 }
 #hero{
-    background-image: url('/images/bk.png');
+    background-image: url('./images/bk.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -38,7 +38,7 @@ img{
     flex-wrap: wrap;
 }
 #about{
-    background-image: url('/images/bk2.png');
+    background-image: url('./images/bk2.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -260,7 +260,7 @@ input:focus {
 }
 @media (min-width: 1024px){
     #day{
-        width: 25%;
+        width: 18%;
     }
     #month{
         width: 35%;
@@ -269,19 +269,20 @@ input:focus {
         width: 30%;
     }
     #religion{
-        width: 90%;
+        width: 85%;
     }
     #caste{
-        width: 90%;
+        width: 85%;
     }
     #phoneNo{
-        width: 75%
+        width: 70%
      }
     #country{
         margin-left: 13%;
+        width:90%;
     }
     #gmail{
-        width: 90%;
+        width: 85%;
     }
 }
 @media screen and (max-width: 768px){
@@ -370,4 +371,12 @@ input:focus {
     #member8{
         display: none;
     }
+}
+
+
+.block{
+	display: block;
+}
+.hidden{
+	display:none;
 }
